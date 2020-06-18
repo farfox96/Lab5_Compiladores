@@ -13,27 +13,31 @@ identificador {letra}({letra}|{digito})*
 constEntera {digito}({digito})*
 
 constDecimal {digito}({digito})*\.({digito})* 
-imprimir 
-
+imprimir "printf"
+leer "scanf"
 
 
 %%
 {separador} {/* omitir */};
 
 {constEntera} {printf(" constante ");           return (CONSTENTERA);};
-{constDecimal} {printf(" decimal ");           return (DECIMAL);};
+{constDecimal} {printf(" decimal ");            return (DECIMAL);};
 
 ":=" {printf(" asignacion ");                   return (ASIG);};
 "+" {printf(" suma ");                          return (MAS);};
+
+"," {printf(" coma ");                          return (COMA);};
+";" {printf(" punto y coma ");                  return (PCOMA);};
+{imprimir} {printf(" printf ");                 return (PRINT);};
+{leer} {printf(" scanf ");                      return (SCAN);};
 
 {identificador} {printf(" indentificador ");    return (IDENTIFICADOR);};
 
 "(" {printf(" delim_a ");                       return (PAR_A);};
 ")" {printf(" delim_b ");                       return (PAR_B);};
-
+"\"" {printf(" dob_comilla ");                  return (D_COM);}; 
 \n {printf(" new_line\n");                      return (NL);};
 
-.
 
 %%
 

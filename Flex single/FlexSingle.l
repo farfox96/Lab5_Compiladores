@@ -12,33 +12,32 @@ digito [0-9]
 identificador {letra}({letra}|{digito})*
 constEntera {digito}({digito})*
 
-constDecimal {digito}({digito})*\.{1}({digito})* 
-print "printf"
-scanf "scanf"
+constDecimal {digito}({digito})*\.({digito})* 
+imprimir "printf"
+leer "scanf"
 
 
 %%
 {separador} {/* omitir */};
 
-{constEntera} {printf(" constante ");};
+{constEntera} {printf(" constante ");           };
+{constDecimal} {printf(" decimal ");            };
 
-{constDecimal} {printf(" decimal "); };
+":=" {printf(" asignacion ");                   };
+"+" {printf(" suma ");                          };
 
-":=" {printf(" asignacion ");};
+"," {printf(" coma ");                          };
+";" {printf(" punto y coma ");                  };
+{imprimir} {printf(" printf ");                 };
+{leer} {printf(" scanf ");                      };
 
-"+" {printf(" suma ");};
+{identificador} {printf(" indentificador ");    };
 
-{print} {printf(" imprimir");};
+"(" {printf(" delim_a ");                       };
+")" {printf(" delim_b ");                       };
+\s" {printf(" dob_comilla ");                  }; 
+\n {printf(" new_line\n");                      };
 
-{identificador} {printf(" indentificador ");};
-
-"(" {printf(" delim_a ");};
-")" {printf(" delim_b ");};
-
-"/*" {printf(" comentario_a ");};
-"*/" {printf(" comentario_b ");};
-
-\n {printf(" new_line\n");};
 
 
 

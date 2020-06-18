@@ -6,7 +6,7 @@
 %}
 
 %token IDENTIFICADOR ASIG MAS CONSTENTERA NL PAR_A PAR_B
-%token DECIMAL PRINT SCAN COM COM_A COM_B
+%token DECIMAL PRINT SCAN D_COM COMM COMM_A COMM_B COMA PCOMA
 %start instrucciones
 
 
@@ -31,7 +31,8 @@ termino: IDENTIFICADOR
 ;
 
 
-imprimir: 
+imprimir:   PAR_A IDENTIFICADOR PAR_B
+          | PAR_A IDENTIFICADOR PAR_B
 
 
 
