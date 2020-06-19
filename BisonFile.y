@@ -49,9 +49,9 @@ printf ("%s\n", s); /* Esta implementación por defecto nos valdrá */
 momento de compilar para usar una implementación por defecto */
 }
 
-main(){
+int main(void){
   //Acciones a ejecutar antes del análisis
  yyparse();
   //Acciones a ejecutar después del análisis
-  
+  return 0;
 }
