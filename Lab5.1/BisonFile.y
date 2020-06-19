@@ -19,11 +19,14 @@
 %%
 instrucciones : instrucciones instruccion 
               | instruccion
+			  
+			  
 ;
 
 instruccion : IDENTIFICADOR ASIG expresion NL
 			| PRINT PAR_A expresion PAR_B PCOMA NL
 			| SCAN PAR_A expresion PAR_B PCOMA NL
+			
 			
 		
 ;
@@ -43,9 +46,7 @@ termino : IDENTIFICADOR termino
 
 %%
 
-
-
-void yyerror (s) /* Llamada por yyparse ante un error */
+yyerror (s) /* Llamada por yyparse ante un error */
   char *s;
 {
 printf ("%s\n", s); /* Esta implementación por defecto nos valdrá */
