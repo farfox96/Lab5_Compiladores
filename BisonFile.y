@@ -49,9 +49,16 @@ printf ("%s\n", s); /* Esta implementación por defecto nos valdrá */
 momento de compilar para usar una implementación por defecto */
 }
 
-int main(void){
-  //Acciones a ejecutar antes del análisis
- yyparse();
-  //Acciones a ejecutar después del análisis
-  return 0;
-}
+int main()
+{
+printf (" -- Bienvenidos al Laboratorio 5 de Diseno de Compiladores -- \n");
+printf (" - Ejemplo de analizador lexico-sintactico con Flex/Bison - \n");
+printf (" - Realizado por Jesus De Gracia y Daniel Gonzalez -\n");
+printf ("Cadena admitida por el analizador para usarla de ejemplo valido: a1:=5+a2\n\n");
+  //Acciones a ejecutar antes del analisis
+  printf ("\n\nIngrese valores para analizar >>\n ");
+  yyparse();
+ 
+  //Acciones a ejecutar después del analisis
+
+ }
