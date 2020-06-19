@@ -6,7 +6,7 @@ fichero instrucciones.l
   #include "y.tab.h" /* GENERADO AUTOMÁTICAMENTE POR BISON */
 %}
 
-separador ([ \t""])+
+separador ([ \t])+
 letra [a-zA-Z]
 digito [0-9]
 identificador {letra}({letra}|{digito})*
@@ -36,7 +36,7 @@ leer "scanf"
 "(" {printf(" delim_a ");                       return (PAR_A);};
 ")" {printf(" delim_b ");                       return (PAR_B);};
 "\"" {printf(" dob_comilla ");                  return (D_COM);}; 
-\n {printf(" new_line\n");                      return (NL);};
+\n {printf(" [EOL]]\n");                      return (NL);};
 
 
 %%

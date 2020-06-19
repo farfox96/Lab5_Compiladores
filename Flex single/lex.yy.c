@@ -286,7 +286,7 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 #define YY_END_OF_BUFFER 16
 static yyconst short int yy_accept[34] =
     {   0,
-        0,    0,   16,   15,    1,   14,    1,   11,   12,    5,
+        0,    0,   16,   15,    1,   14,   13,   11,   12,    5,
         6,    2,   15,    7,   10,   10,   10,    1,    3,    2,
         4,   10,   10,   10,    3,   10,   10,   10,   10,   10,
         9,    8,    0
@@ -333,10 +333,10 @@ static yyconst int yy_meta[24] =
 
 static yyconst short int yy_base[35] =
     {   0,
-        0,    0,   47,   48,   22,   48,   23,   48,   48,   48,
-       48,   19,   33,   48,    0,   24,   28,   28,   33,   24,
-       48,    0,   24,   26,   30,   20,   19,   14,   19,   18,
-        0,    0,   48,   29
+        0,    0,   43,   44,   40,   44,   44,   44,   44,   44,
+       44,   15,   28,   44,    0,   19,   23,   36,   27,   17,
+       44,    0,   18,   20,   24,   14,   13,    8,   13,   12,
+        0,    0,   44,   26
     } ;
 
 static yyconst short int yy_def[35] =
@@ -347,28 +347,26 @@ static yyconst short int yy_def[35] =
        34,   34,    0,   33
     } ;
 
-static yyconst short int yy_nxt[72] =
+static yyconst short int yy_nxt[68] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,    4,   12,
        13,   14,    4,   15,   15,   15,   15,   15,   15,   16,
-       15,   17,   15,   18,   18,   18,   18,   19,   20,   18,
-       22,   18,   19,   20,   32,   31,   30,   29,   28,   25,
-       27,   26,   25,   24,   23,   21,   33,    3,   33,   33,
+       15,   17,   15,   19,   20,   19,   20,   22,   32,   31,
+       30,   29,   28,   25,   27,   26,   25,   18,   24,   23,
+       21,   18,   33,    3,   33,   33,   33,   33,   33,   33,
        33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
-       33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
-       33
+       33,   33,   33,   33,   33,   33,   33
     } ;
 
-static yyconst short int yy_chk[72] =
+static yyconst short int yy_chk[68] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    5,    7,    5,    7,   12,   12,   18,
-       34,   18,   20,   20,   30,   29,   28,   27,   26,   25,
-       24,   23,   19,   17,   16,   13,    3,   33,   33,   33,
+        1,    1,    1,   12,   12,   20,   20,   34,   30,   29,
+       28,   27,   26,   25,   24,   23,   19,   18,   17,   16,
+       13,    5,    3,   33,   33,   33,   33,   33,   33,   33,
        33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
-       33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
-       33
+       33,   33,   33,   33,   33,   33,   33
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -390,7 +388,7 @@ fichero instrucciones.l
 #line 5 "FlexSingle.l"
   #include <stdio.h>
   //#include "y.tab.h" /* GENERADO AUTOMÁTICAMENTE POR BISON */
-#line 394 "lex.yy.c"
+#line 392 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -543,7 +541,7 @@ YY_DECL
 
 #line 20 "FlexSingle.l"
 
-#line 547 "lex.yy.c"
+#line 545 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -600,7 +598,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 48 );
+		while ( yy_base[yy_current_state] != 44 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -694,14 +692,14 @@ YY_RULE_SETUP
 case 14:
 YY_RULE_SETUP
 #line 39 "FlexSingle.l"
-{printf(" new_line\n");                      };
+{printf(" [EOL]1\n");                      };
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 44 "FlexSingle.l"
 ECHO;
 	YY_BREAK
-#line 705 "lex.yy.c"
+#line 703 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 

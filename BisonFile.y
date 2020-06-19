@@ -31,8 +31,8 @@ termino: IDENTIFICADOR
 ;
 
 
-imprimir:   PAR_A IDENTIFICADOR PAR_B
-          | PAR_A IDENTIFICADOR PAR_B
+imprimir:   PAR_A D_COM IDENTIFICADOR D_COM PAR_B
+          | 
 
 
 
